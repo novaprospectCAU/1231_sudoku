@@ -24,6 +24,18 @@ int input_check(int argc, string argv)
   return 0;
 }
 
+void print_map(unsigned int map[10][9])
+{
+  for (unsigned int y = 0; y < 9; y++)
+  {
+    for (unsigned int x = 0; x < 9; x++)
+    {
+      cout << map[y][x] << " ";
+    }
+    cout << '\n';
+  }
+}
+
 int main(int argc, char *argv[])
 {
   if (input_check(argc, argv[argc - 1]))
@@ -50,14 +62,7 @@ int main(int argc, char *argv[])
     y++;
   }
 
-  for (int y = 0; y < 9; y++)
-  {
-    for (int x = 0; x < 9; x++)
-    {
-      cout << map[y][x] << " ";
-    }
-    cout << '\n';
-  }
+  print_map(map);
 
   return 0;
 }
